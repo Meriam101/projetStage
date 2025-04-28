@@ -199,6 +199,56 @@ pre {
 
 figure {
   margin: 0 0 1rem; }
+  .navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #111827;
+}
+
+.auth-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dashboard-link {
+    color: #374151;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.login-button {
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #1e40af;
+}
+
+.container {
+    margin-top: 80px; /* Pour que le contenu ne soit pas caché sous la navbar */
+}
 
 img {
   vertical-align: middle;

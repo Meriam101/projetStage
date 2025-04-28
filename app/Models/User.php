@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'post',
+       'code',
+        'expire_at',
     ];
 
     /**
@@ -41,4 +44,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function tasks()
+{
+    return $this->hasMany(Task::class);
+}
+   public function GenerateCode(){
+    $this->timestamps = false;
+    $this->code = rand(1000,9999) ;
+    $this->expire_at = now()->addMinute(15);
+    $this->save();
+   }
 }

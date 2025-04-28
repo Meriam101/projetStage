@@ -27,32 +27,38 @@
                     <div class="dropdown  nav-itemd-none d-md-flex">
                         <a href="#" class="d-flex  nav-item nav-link pl-0 country-flag1" data-toggle="dropdown"
                            aria-expanded="false">
-                            @if (App::getLocale() == 'ar')
-                                <span class="avatar country-Flag mr-0 align-self-center bg-transparent"><img
-                                        src="{{URL::asset('Dashboard/img/flags/egypt_flag.jfif')}}" alt="img"></span>
-                                <strong
-                                    class="mr-2 ml-2 my-auto">{{ LaravelLocalization::getCurrentLocaleName() }}</strong>
-                            @else
-                                <span class="avatar country-Flag mr-0 align-self-center bg-transparent"><img
-                                        src="{{URL::asset('Dashboard/img/flags/us_flag.jpg')}}" alt="img"></span>
-                                <strong
-                                    class="mr-2 ml-2 my-auto">{{ LaravelLocalization::getCurrentLocaleName() }}</strong>
-                            @endif
+                           @if (App::getLocale() == 'ar')
+    <span class="avatar country-Flag mr-0 align-self-center bg-transparent"><img
+        src="{{ URL::asset('Dashboard/img/flags/egypt_flag.jfif') }}" alt="img"></span>
+    <strong class="mr-2 ml-2 my-auto">{{ LaravelLocalization::getCurrentLocaleName() }}</strong>
+@elseif (App::getLocale() == 'fr')
+    <span class="avatar country-Flag mr-0 align-self-center bg-transparent"><img
+        src="{{ URL::asset('Dashboard/img/flags/french_flag.jpg') }}" alt="img"></span>
+    <strong class="mr-2 ml-2 my-auto">{{ LaravelLocalization::getCurrentLocaleName() }}</strong>
+@else
+    <span class="avatar country-Flag mr-0 align-self-center bg-transparent"><img
+        src="{{ URL::asset('Dashboard/img/flags/us_flag.jpg') }}" alt="img"></span>
+    <strong class="mr-2 ml-2 my-auto">{{ LaravelLocalization::getCurrentLocaleName() }}</strong>
+@endif
+
                             <div class="my-auto">
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-left dropdown-menu-arrow" x-placement="bottom-end">
                             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
-                                   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                    @if($properties['native'] == "English")
-                                        <i class="flag-icon flag-icon-us"></i>
-                                    @elseif($properties['native'] == "العربية")
-                                        <i class="flag-icon flag-icon-eg"></i>
-                                    @endif
-                                    {{ $properties['native'] }}
-                                </a>
-                            @endforeach
+    <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
+       href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+        @if($properties['native'] == "English")
+            <i class="flag-icon flag-icon-us"></i>
+        @elseif($properties['native'] == "العربية")
+            <i class="flag-icon flag-icon-eg"></i>
+        @elseif($properties['native'] == "Français")
+            <i class="flag-icon flag-icon-fr"></i>
+        @endif
+        {{ $properties['native'] }}
+    </a>
+@endforeach
+
                         </div>
                     </div>
                 </li>
@@ -71,10 +77,7 @@
                                                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                                      class="feather feather-search"><circle cx="11" cy="11"
-                                                                                            r="8"></circle><line x1="21"
-                                                                                                                 y1="21"
-                                                                                                                 x2="16.65"
-                                                                                                                 y2="16.65"></line></svg>
+                                                                     y2="16.65"></line></svg>
 											</button>
 										</span>
                         </div>
@@ -251,7 +254,7 @@
                             </div>
                         </div>
                         <a class="dropdown-item" href=""><i class="bx bx-user-circle"></i>Profile</a>
-                        <a class="dropdown-item" href=""><i class="bx bx-cog"></i>Edit Profile</a>
+                        <a class="dropdown-item" href="{{ route('profile.edit') }}"><i class="bx bx-cog"></i>Edit Profile</a>
                         
                         @if(auth('web')->check())
                             <form method="POST" action="{{ route('logout') }}">
@@ -284,7 +287,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/app.jsx')}}"></script>
 
 <script>
     // var notificationsWrapper   = $('.dropdown-notifications');

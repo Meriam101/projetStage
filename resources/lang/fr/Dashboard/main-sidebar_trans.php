@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'Main' => 'Principal',
+    'index' => 'Tableau de bord',
+    'General' => 'Général',
+    'Icons' => 'Icônes',
+    'Charts' => 'Graphiques',
+    'Ecommerce' => 'E-commerce',
+    'WEB_APPS' => 'Applications Web',
+    'Apps' => 'Applications',
+    'Elements' => 'Éléments',
+    'Advanced_UI' => 'Interface Avancée',
+    'COMPONENTS' => 'COMPOSANTS',
+    'Mail' => 'Courrier',
+    'Forms' => 'Formulaires',
+    'Tables' => 'Tableaux',
+    'Widgets' => 'Widgets',
+    'Maps' => 'Cartes',
+    'PAGES' => 'PAGES',
+    'Pages' => 'Pages',
+    'Utilities' => 'Utilitaires',
+    'Background' => 'Arrière-plan',
+    'Border' => 'Bordure',
+    'Hot' => 'Nouveau',
+];

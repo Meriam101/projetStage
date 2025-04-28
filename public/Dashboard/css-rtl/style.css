@@ -83,6 +83,8 @@ License        :   Licensed under ThemeForest License
 /* ######## FONT ######## */
 /* ############### FONTS IMPORT ############### */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
 /* ######## BOOTSTRAP ######## */
 /*Color variables*/
 /*gray variables*/
@@ -2365,7 +2367,7 @@ a.badge-dark.focus {
   align-items: center;
   font-size: 10px;
   font-weight: 500;
-  font-family: "Roboto", sans-serif;
+    font-family: "Cairo", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #949eb7;
@@ -10178,7 +10180,7 @@ a.close.disabled {
 /* ############### PAGE LAYOUT STYLES ############### */
 /* ###### 6.3 Global  ###### */
 body {
-  font-family: "Roboto", sans-serif; }
+    font-family: "Cairo", sans-serif; }
 
 .main-body, .main-dashboard {
   min-height: 100vh;
@@ -23008,11 +23010,11 @@ input.parsley-error:focus, textarea.parsley-error:focus, input.parsley-success:f
 
 /* ###### 4.8 RangeSlider ###### */
 .irs-min, .irs-max {
-  font-family: "Roboto", sans-serif;
+    font-family: "Cairo", sans-serif;
   border-radius: 0; }
 
 .irs-from, .irs-to, .irs-single {
-  font-family: "Roboto", sans-serif;
+    font-family: "Cairo", sans-serif;
   background-color: #0162e8;
   border-radius: 0; }
 

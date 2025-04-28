@@ -1,7 +1,8 @@
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-       <!----hadi li kayna f route login.user hya li kayna f name dyal store f folder route exact f file auth.php--->
+       <!----hadi li kayna f route login.user hya li kayna f 
+        name dyal store f folder route exact f file auth.php--->
     <form method="POST" action="{{ route('login.user') }}">
         @csrf
 

@@ -1,0 +1,26 @@
+<?php
+
+return [
+    'Main' => 'Main',
+    'index' => 'Dashboard',
+    'General' => 'General',
+    'Icons' => 'Icons',
+    'Charts' => 'Charts',
+    'Ecommerce' => 'E-commerce',
+    'WEB_APPS' => 'Web Applications',
+    'Apps' => 'Apps',
+    'Elements' => 'Elements',
+    'Advanced_UI' => 'Advanced UI',
+    'COMPONENTS' => 'COMPONENTS',
+    'Mail' => 'Mail',
+    'Forms' => 'Forms',
+    'Tables' => 'Tables',
+    'Widgets' => 'Widgets',
+    'Maps' => 'Maps',
+    'PAGES' => 'PAGES',
+    'Pages' => 'Pages',
+    'Utilities' => 'Utilities',
+    'Background' => 'Background',
+    'Border' => 'Border',
+    'Hot' => 'Hot',
+];

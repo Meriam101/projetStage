@@ -14,9 +14,9 @@ use App\Http\Controllers\Auth\AdminController;
 // Routes accessibles aux invités uniquement
 Route::middleware('guest')->group(function () {
     Route::get('/User/login', [AuthenticatedSessionController::class, 'create'])->name('login');
-    Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login.user');
+    Route::post('/login', [AuthenticatedSessionController::class, 'login'])->name('login.user');
 
-    Route::post('/login/admin', [AdminController::class, 'store'])->name('login.admin');
+    Route::post('/login/admin', [AdminController::class, 'login'])->name('login.admin');
 });
 
 // Routes protégées (nécessitent une authentification)

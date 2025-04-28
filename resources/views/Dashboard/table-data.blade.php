@@ -7,6 +7,7 @@
 <link href="{{URL::asset('assets/plugins/datatable/css/jquery.dataTables.min.css')}}" rel="stylesheet">
 <link href="{{URL::asset('assets/plugins/datatable/css/responsive.dataTables.min.css')}}" rel="stylesheet">
 <link href="{{URL::asset('assets/plugins/select2/css/select2.min.css')}}" rel="stylesheet">
+
 @endsection
 @section('page-header')
 				<!-- breadcrumb -->
@@ -46,7 +47,7 @@
 @endsection
 @section('content')
 				<!-- row opened -->
-				<div class="row row-sm">
+<div class="row row-sm">
 					<div class="col-xl-12">
 						<div class="card">
 							<div class="card-header pb-0">
@@ -476,6 +477,7 @@
 							</div>
 						</div>
 					</div>
+
 					<!--/div-->
 
 					<!--div-->
