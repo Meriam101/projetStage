@@ -69,7 +69,7 @@
 													</div>
 												</form>
 												<div class="main-signin-footer mt-5">
-													<p><a href="">Forgot password?</a></p>
+													<p><a id="user-forgot-link" href="{{ route('password.request') }}" >Forgot password User ?</a></p>
 													<p>Don't have an account? <a href="{{ url('/' . $page='signup') }}">Create an Account</a></p>
 												</div>
 											</div>
@@ -94,8 +94,9 @@
 													</div>
 												</form>
 												<div class="main-signin-footer mt-5">
-													<p><a href="">Forgot password?</a></p>
-													<p>Don't have an account? <a href="{{ url('/' . $page='signup') }}">Create an Account</a></p>
+
+												<p>Don't have an account? <a href="{{ url('/' . $page='signup') }}">Create an Account</a></p>
+												{{-- <p><a id="admin-forgot-link" href="{{ route('admin.password.request') }}" style="display: none">Forgot password Admin ?</a></p> --}}
 												</div>
 											</div>
 											</div>
@@ -120,5 +121,6 @@ $(document).ready(function () {
         });
     });
 });
+
 </script>
 @endsection

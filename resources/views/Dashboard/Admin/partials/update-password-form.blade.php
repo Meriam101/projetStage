@@ -1,3 +1,4 @@
+{{-- resources/views/Dashboard/Admin/partials/update-password-form.blade.php --}}
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
@@ -9,12 +10,14 @@
         </p>
     </header>
 
+    {{-- Action pointe vers la route admin.password.update --}}
     <form method="post" action="{{ route('admin.password.update') }}" class="mt-6 space-y-6">
         @csrf
-        @method('put')
+        @method('put') {{-- Utiliser PUT car la route est définie avec PUT --}}
 
         <div>
             <x-input-label for="current_password" :value="__('Current Password')" />
+            {{-- Utilise l'error bag 'updatePassword' comme défini dans AdminController --}}
             <x-text-input id="current_password" name="current_password" type="password" class="mt-1 block w-full" autocomplete="current-password" />
             <x-input-error :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
         </div>
@@ -34,6 +37,7 @@
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
+            {{-- Vérifie le statut 'password-updated' comme retourné par AdminController --}}
             @if (session('status') === 'password-updated')
                 <p
                     x-data="{ show: true }"

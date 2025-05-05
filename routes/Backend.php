@@ -4,7 +4,6 @@ use App\Http\Controllers\Auth\AdminController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Dashboard\DashboardController;
-use App\Http\Controllers\Dashboard\SectionController;
 use App\Http\Controllers\TaskController;
 use App\Models\User;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;

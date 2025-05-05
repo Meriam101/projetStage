@@ -254,16 +254,23 @@
                             </div>
                         </div>
                         <a class="dropdown-item" href=""><i class="bx bx-user-circle"></i>Profile</a>
-                        <a class="dropdown-item" href="{{ route('profile.edit') }}"><i class="bx bx-cog"></i>Edit Profile</a>
-                        
+                        <a class="dropdown-item" href="{{ auth()->guard('admin')->check() ? route('admin.profile.edit') : route('profile.edit') }}">
+                            <i class="bx bx-cog"></i> Edit Profile
+                        </a>
+                                                
                         @if(auth('web')->check())
-                            <form method="POST" action="{{ route('logout') }}">
-                                @else
-                                    <form method="POST" action="{{ route('logout.admin') }}">
-                                                                        @endif
-                                                                        @csrf
-              <a class="dropdown-item" href="#" onclick="event.preventDefault(); this.closest('form').submit();"><i class="bx bx-log-out"></i>Logout</a>
-
+                        <form method="POST" action="{{ route('logout') }}">
+                    @else
+                        <form method="POST" action="{{ route('logout.admin') }}">
+                    @endif
+                    
+                        @csrf
+                        <a class="dropdown-item" href="#" onclick="event.preventDefault(); this.closest('form').submit();">
+                            <i class="bx bx-log-out"></i>Logout
+                        </a>
+                    
+                    </form>
+                    
                                                                     </form>
 
                     </div>
