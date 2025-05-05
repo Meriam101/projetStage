@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Notifications;
 
 use Illuminate\Notifications\Notification;
@@ -9,14 +8,29 @@ class AdminResetPasswordNotification extends Notification
 {
     public $token;
 
+    public function __construct($token)
+    {
+        $this->token = $token;
+    }
+
+    // OBLIGATOIRE : cette méthode indique via quels canaux la notification sera envoyée
+    public function via($notifiable)
+    {
+        return ['mail'];
+    }
+
+    // Crée le contenu de l’e-mail
     public function toMail($notifiable)
     {
-        $resetUrl = url("/admin/reset-password/{$this->token}?email={$notifiable->email}");
+        $url = url(route('password.reset', [
+            'token' => $this->token,
+            'email' => $notifiable->getEmailForPasswordReset(),
+        ], false));
 
         return (new MailMessage)
-            ->subject('Admin Password Reset Notification')
-            ->line('You are receiving this email because we received a password reset request for your account.')
-            ->action('Reset Password', $resetUrl)
-            ->line('If you did not request a password reset, no further action is required.');
-    }    
+            ->subject('Réinitialisation du mot de passe Admin')
+            ->line('Vous recevez ce mail car nous avons reçu une demande de réinitialisation du mot de passe pour votre compte.')
+            ->action('Réinitialiser le mot de passe', $url)
+            ->line('Si vous n’avez pas demandé de réinitialisation du mot de passe, aucune action n’est requise.');
+    }
 }

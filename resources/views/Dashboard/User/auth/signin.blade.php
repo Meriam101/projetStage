@@ -96,7 +96,7 @@
 												<div class="main-signin-footer mt-5">
 
 												<p>Don't have an account? <a href="{{ url('/' . $page='signup') }}">Create an Account</a></p>
-												{{-- <p><a id="admin-forgot-link" href="{{ route('admin.password.request') }}" style="display: none">Forgot password Admin ?</a></p> --}}
+												<p><a id="admin-forgot-link" href="{{ route('password.request') }}">Forgot password Admin ?</a></p>
 												</div>
 											</div>
 											</div>

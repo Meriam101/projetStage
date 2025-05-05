@@ -27,7 +27,6 @@
 				@yield('content')
 				@yield('js')
 
-				@include('Dashboard.layouts.sidebar')
 				@include('Dashboard.layouts.models')
             	@include('Dashboard.layouts.footer')
 				@include('Dashboard.layouts.footer-scripts')	

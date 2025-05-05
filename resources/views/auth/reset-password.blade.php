@@ -1,9 +1,8 @@
     <h1 class="title">Reset your password</h1>
 
     <div class="mx-auto max-w-screen-sm card">
-        <form action="{{ route('password.update') }}" method="post">
+        <form action="{{ url('/reset-password') }}" method="post">
             @csrf
-
             <input type="hidden" name="token" value="{{ $token }}">
 
             {{-- Email --}}
