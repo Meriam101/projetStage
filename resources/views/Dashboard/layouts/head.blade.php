@@ -4,9 +4,9 @@
 @yield('css')
 @if (App::getLocale()=='ar')
 <!-- Favicon -->
-<link rel="icon" href="{{URL::asset('Dashboard/img/brand/favicon.png')}}" type="image/x-icon"/>
+{{-- <link rel="icon" href="{{URL::asset('Dashboard/img/brand/favicon.png')}}" type="image/x-icon"/> --}}
 <!-- Icons css -->
-<link href="{{URL::asset('Dashboard/css/icons.css')}}" rel="stylesheet">
+{{-- <link href="{{URL::asset('Dashboard/css/icons.css')}}" rel="stylesheet"> --}}
 <!--  Custom Scroll bar-->
 <link href="{{URL::asset('Dashboard/plugins/mscrollbar/jquery.mCustomScrollbar.css')}}" rel="stylesheet"/>
 <!--  Sidebar css -->

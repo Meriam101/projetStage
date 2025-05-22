@@ -20,6 +20,7 @@ class TaskController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
+            'date_fin' => 'required',
             'user_id' => 'required|exists:users,id'
         ]);
     
@@ -49,9 +50,9 @@ class TaskController extends Controller
 public function getTasks($id)
 {
     $tasks = Task::where('user_id', $id)->get();
-    $user = User::findOrFail($id);
-    return view('tasks.index',['user' => $user,'tasks' => $tasks]);
+    return response()->json($tasks);
 }
+
 
 
 }

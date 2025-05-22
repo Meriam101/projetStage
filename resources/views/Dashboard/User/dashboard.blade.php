@@ -34,21 +34,7 @@
 @vite('resources/js/app.jsx')
 
 
-    <!-- Chart JS, Map plugins, etc. -->
-    {{-- <script src="{{ URL::asset('Dashboard/plugins/chart.js/Chart.bundle.min.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/plugins/raphael/raphael.min.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.pie.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.resize.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/plugins/jquery.flot/jquery.flot.categories.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/js/dashboard.sampledata.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/js/chart.flot.sampledata.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/js/apexcharts.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/js/modal-popup.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/js/index.js') }}"></script>
-    <script src="{{ URL::asset('Dashboard/js/jquery.vmap.sampledata.js') }}"></script> --}}
+
 @endsection
 
 <!-- CSS -->

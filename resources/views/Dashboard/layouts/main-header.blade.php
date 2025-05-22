@@ -4,10 +4,10 @@
         <div class="main-header-left">
             <div class="responsive-logo">
                 <a href="{{ url('/index') }}">
-                    <img src="{{ URL::asset('Dashboard/img/brand/logo.png') }}" class="logo-1" alt="logo">
+                    {{-- <img src="{{ URL::asset('Dashboard/img/brand/logo.png') }}" class="logo-1" alt="logo">
                     <img src="{{ URL::asset('Dashboard/img/brand/logo-white.png') }}" class="dark-logo-1" alt="logo">
                     <img src="{{ URL::asset('Dashboard/img/brand/favicon.png') }}" class="logo-2" alt="logo">
-                    <img src="{{ URL::asset('Dashboard/img/brand/favicon.png') }}" class="dark-logo-2" alt="logo">
+                    <img src="{{ URL::asset('Dashboard/img/brand/favicon.png') }}" class="dark-logo-2" alt="logo"> --}}
                 </a>
             </div>
 
@@ -97,7 +97,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="dropdown-item" href="#"><i class="bx bx-user-circle"></i> Profile</a>
+                        {{-- <a class="dropdown-item" href="#"><i class="bx bx-user-circle"></i> Profile</a> --}}
                         <a class="dropdown-item" href="{{ auth()->guard('admin')->check() ? route('admin.profile.edit') : route('profile.edit') }}">
                             <i class="bx bx-cog"></i> Edit Profile
                         </a>

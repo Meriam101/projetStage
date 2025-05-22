@@ -18,6 +18,7 @@ Route::get('/tasks', [TaskController::class, 'index']);
 Route::post('/tasks', [TaskController::class, 'store']);
 Route::patch('/tasks/{id}/complete', [TaskController::class, 'markComplete']);
 Route::delete('/tasks/{id}', [TaskController::class, 'destroy']);
+Route::get('/employees/{id}/tasks', [TaskController::class, 'getTasks']);
 
 
 
